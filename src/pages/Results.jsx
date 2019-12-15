@@ -6,11 +6,11 @@ const Results = (props) => {
 	const [ inputData, setInputData ] = useState ([ '' ])
 	const [ flights, setFlights ] = useState([ '' ])
 	const [ isLoading, toggleLoading ] = useState(true)
-
+	
 	const getFlights = async (values) => {
 		let { data } = await fetchData(values)
 		setFlights(data)
-		setInputData(values)
+		setInputData(values) //me parece que esto desvirtúa un poco la función
 		toggleLoading(false)
 	}
 	
@@ -24,7 +24,8 @@ const Results = (props) => {
 		'cargando'
 	) : (
 		<div>
-			<h1>Encontramos {flights.length} vuelos para ir de {inputData.departure} a {inputData.arrival} </h1>
+			<h1>Encontramos {flights.length} vuelos para ir 
+				de {inputData.departure} a {inputData.arrival}</h1>
 			<ul>{flights.map((f) => <Flight key={f.id} data={f} />)}</ul>
 		</div>
 	)
