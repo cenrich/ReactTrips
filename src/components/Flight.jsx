@@ -1,23 +1,22 @@
 import React from 'react'
 
 const Flight = ({ data: { itineraries, price: { grandTotal, currency } } }) => (
-	<ul>
-		<li>
-			{itineraries.map((e, i) => {
-				return (
-					<div key={i}>
-						<p>{e.duration}</p>
-						{e.segments.map((e, i) => (
-							<div key={i}>
-								<span>{`${e.departure.iataCode} - ${e.arrival.iataCode}`}</span>
-							</div>
-						))}
-					</div>
-				)
-			})}
-		</li>
-		<li>{`Precio: ${currency} ${grandTotal}`}</li>
-	</ul>
+	<li>
+		{itineraries.map((e, i) => {
+			return (
+				<div key={i}>
+					<div>{e.duration}</div>
+					{e.segments.map((e, i) => (
+						<div key={i}>
+							{`${e.departure.iataCode} - ${e.arrival.iataCode}`}
+						</div>
+					))}
+				</div>
+			)
+		})}
+		<div>{`Precio: ${currency} ${grandTotal}`}</div>
+		<button type={'button'} onClick={() => console.log('hola')}>Seleccionar</button>
+	</li>
 )
 
 export default Flight
