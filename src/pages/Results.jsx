@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Flight from '../components/Flight'
 import fetchData from '../helpers/apiCall'
+import '../pages/Results.scss'
 
 const Results = (props) => {
 	const [ inputData, setInputData ] = useState ([ '' ])
@@ -20,15 +21,25 @@ const Results = (props) => {
 		getFlights(data)
 	}, [])
 
-	return isLoading ? (
-		'cargando'
-	) : (
+	return isLoading? (
+
+		<div class="load-wrapp">
+		 <div class="load-7">
+			 <p>Loading</p>
+			 <div class="square-holder">
+				 <div class="square"></div>
+			 </div>
+		 </div>
+		</div>
+
+	)
+	  : (
 		<div>
 			<h1>Encontramos {flights.length} vuelos para ir 
 				de {inputData.departure} a {inputData.arrival}</h1>
 			<ul>{flights.map((f) => <Flight key={f.id} data={f} />)}</ul>
 		</div>
-	)
+	) 
 }
 
 export default Results
