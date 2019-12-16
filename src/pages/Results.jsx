@@ -3,7 +3,11 @@ import Flight from '../components/Flight'
 import fetchData from '../helpers/apiCall'
 import '../pages/Results.scss'
 
+
+
 const Results = (props) => {
+
+	
 	const [ inputData, setInputData ] = useState ([ '' ])
 	const [ flights, setFlights ] = useState([ '' ])
 	const [ isLoading, toggleLoading ] = useState(true)
@@ -21,7 +25,12 @@ const Results = (props) => {
 		getFlights(data)
 	}, [])
 
-	return isLoading? (
+	return (
+
+
+		
+	
+	isLoading? (
 
 		<div class="load-wrapp">
 		 <div class="load-7">
@@ -34,12 +43,31 @@ const Results = (props) => {
 
 	)
 	  : (
+		
 		<div>
-			<h1>Encontramos {flights.length} vuelos para ir 
-				de {inputData.departure} a {inputData.arrival}</h1>
-			<ul>{flights.map((f) => <Flight key={f.id} data={f} />)}</ul>
+			<nav className='mainNavbar'>
+				<ul>
+					<li><a href={'#'}>LOGO</a></li>
+					<li><a href={'#'}>Home</a></li>
+					<li><a href={'#'}>About</a></li>
+					<li><a href={'#'}>Portfolio</a></li>
+					<li><a href={'#'}>Services</a></li>
+					<li><a href={'#'}>Contact</a></li>
+					<li className={'myAccount'}><a href={'#'}>My Account</a></li>
+				</ul>
+	 		</nav>
+			<div className="mainTitles">
+				<h1>Cheap Flights Best Deals</h1>
+				<h3>Search hundreds of travel sites at once</h3>
+			</div>	
+			<h2 className="flightResultsTitle">Encontramos {flights.length} vuelos para ir 
+				de {inputData.departure} a {inputData.arrival}</h2>
+			<ul className="resultList">{flights.map((f) => <Flight key={f.id} data={f} />)}</ul>
 		</div>
 	) 
+	
+
+	)
 }
 
 export default Results

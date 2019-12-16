@@ -10,22 +10,25 @@ const Flight = ({ data: { itineraries, price: { grandTotal, currency } } }) => {
 		<li>
 			{itineraries.map((e, i) => {
 				return (
-					<div key={i}>
-						<div>{e.duration}</div>
+					<div key={i} className="destinationResults">
+						<div className="duration">{e.duration}</div>
 						{e.segments.map((e, i) => (
-							<div key={i}>
+							<div className="destination" key={i}>
 								{`${e.departure.iataCode} - ${e.arrival.iataCode}`}
 							</div>
 						))}
 					</div>
 				)
 			})}
-			<div>{`Precio: ${currency} ${grandTotal}`}</div>
-			<button type={'button'} 
+	
+				<div className="price">{`Precio: ${currency} ${grandTotal}`}</div>
+		
+			<button className="selectBtn" type={'button'} 
 					onClick={()=>retrieveSelection(itineraries, currency, grandTotal)}>
 					Seleccionar
 			</button>
 		</li>
+	
 	)
 }
 
