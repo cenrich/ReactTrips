@@ -6,7 +6,7 @@ const item = {
 const toUrlEncoded = (obj) =>
 	Object.keys(obj).map((k) => encodeURIComponent(k) + '=' + encodeURIComponent(obj[k])).join('&')
 
-const fetchData = ({ departure, arrival }) =>
+const fetchData = ({ departure, arrival, from, to, adults }) =>
 	fetch('https://test.api.amadeus.com/v1/security/oauth2/token', {
 		method: 'post',
 		headers: {
@@ -18,7 +18,7 @@ const fetchData = ({ departure, arrival }) =>
 		.then((data) => {
 			const accessToken = data.access_token
 			return fetch(
-				`https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=${departure}&destinationLocationCode=${arrival}&departureDate=2020-01-01&returnDate=2020-01-05&adults=2`,
+				`https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=${departure}&destinationLocationCode=${arrival}&departureDate=${from}&returnDate=${to}&adults=${adults}`,
 				{
 					headers: {
 						Authorization: `Bearer ${accessToken}`
