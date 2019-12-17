@@ -1,9 +1,9 @@
 @import "../helpers/reset";
+@import "../helpers/variables";
 
 body{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: floralwhite;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: $font;
+    background-color: $yellow;
     .load-wrapp {
     
         text-align: center;
@@ -22,8 +22,8 @@ body{
         background-repeat: no-repeat;
         width: 200px;
         height: 200px; 
-       display: flex;
-       justify-content: center;
+        display: flex;
+        justify-content: center;
     }
     .load-7 .square {animation: loadingG 10s cubic-bezier(.17,.37,.43,.67) infinite;}
     @keyframes loadingG {
@@ -44,15 +44,15 @@ body{
             display: inline;
             font-size: 17px;
             &:hover {
-                color:#B6DBF2;
+                color: $light-blue;
               }
             a {
-              color: #8BB4D9;
+              color:$blue;
               text-decoration: none;
               padding: 14px;
               &:hover {
-                background-color: #8BB4D9;
-                color: #B6DBF2;
+                background-color: $blue;
+                color:$light-blue;
               }
             }
           }
@@ -64,14 +64,14 @@ body{
     .mainTitles{
         font-size: 30px;
         text-align: center;
-        color:grey;
+        color: $grey;
         line-height: 50px;
         text-transform: uppercase;
     }
     .flightResultsTitle{
         font-size: 20px;
         text-align: left;
-        color:grey;
+        color:$grey;
     }
     .resultList{
         display:flex;
