@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react'
 import Flight from '../components/Flight'
 import fetchData from '../helpers/apiCall'
 import '../pages/Results.scss'
-
+import Navbar from "../pages/Navbar"
+import Header from '../pages/Header'
 
 
 const Results = (props) => {
@@ -30,7 +31,7 @@ const Results = (props) => {
 
 		
 	
-	isLoading? (
+	isLoading? ( 
 
 		<div class="load-wrapp">
 		 <div class="load-7">
@@ -41,30 +42,21 @@ const Results = (props) => {
 		 </div>
 		</div>
 
-	)
+ 	) 
 	  : (
 		
 		<div>
-			<nav className='mainNavbar'>
-				<ul>
-					<li><a href={'#'}>LOGO</a></li>
-					<li><a href={'#'}>Home</a></li>
-					<li><a href={'#'}>About</a></li>
-					<li><a href={'#'}>Portfolio</a></li>
-					<li><a href={'#'}>Services</a></li>
-					<li><a href={'#'}>Contact</a></li>
-					<li className={'myAccount'}><a href={'#'}>My Account</a></li>
-				</ul>
-	 		</nav>
-			<div className="mainTitles">
-				<h1>Cheap Flights Best Deals</h1>
-				<h3>Search hundreds of travel sites at once</h3>
+		<Navbar></Navbar>
+		<Header></Header>
+			
+			<h2 className="flightResultsTitle">
+				Encontramos {flights.length} vuelos para ir de <span> {inputData.departure} </span> a <span>{inputData.arrival} </span>
+			</h2>
+			<div className="resultsContainer">
+					<ul className="resultList">{flights.map((f) => <Flight key={f.id} data={f} />)}</ul>
 			</div>	
-			<h2 className="flightResultsTitle">Encontramos {flights.length} vuelos para ir 
-				de {inputData.departure} a {inputData.arrival}</h2>
-			<ul className="resultList">{flights.map((f) => <Flight key={f.id} data={f} />)}</ul>
 		</div>
-	) 
+	)  
 	
 
 	)

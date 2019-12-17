@@ -1,0 +1,43 @@
+@import "../helpers/reset";
+@import "../helpers/variables";
+
+
+.mainNavbar {
+    background-color:$light-grey;
+    width: 100%;
+    position: fixed;  
+    ul {
+      list-style-type: none;
+      margin: 0;
+
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      li {
+
+        font-size: 17px;
+        padding: 14px;
+        &:hover {
+            color: $blue;
+          }
+        a {
+          color:$white;
+          text-decoration: none;
+         
+          &:hover {
+            background-color:$blue;
+            color:$white;
+          }
+          .logo{
+              width: 50px;
+              height: 50px;
+              background-image: url("../helpers/logo48x48.png") ;
+             background-repeat: no-repeat;
+          }
+        }
+      }
+    }
+  }
+  .myAccount{
+    float: right;
+}
