@@ -33,11 +33,11 @@ const Results = (props) => {
 	
 	isLoading? ( 
 
-		<div class="load-wrapp">
-		 <div class="load-7">
+		<div className={"load-wrapp"}>
+		 <div className={"load-7"}>
 			 <p>Loading</p>
-			 <div class="square-holder">
-				 <div class="square"></div>
+			 <div className={"square-holder"}>
+				 <div className={"square"}></div>
 			 </div>
 		 </div>
 		</div>
@@ -49,11 +49,11 @@ const Results = (props) => {
 		<Navbar></Navbar>
 		<Header></Header>
 			
-			<h2 className="flightResultsTitle">
+			<div className={"resultsContainer"}>
+			<h2 className={"flightResultsTitle"}>
 				Encontramos {flights.length} vuelos para ir de <span> {inputData.departure} </span> a <span>{inputData.arrival} </span>
 			</h2>
-			<div className="resultsContainer">
-					<ul className="resultList">{flights.map((f) => <Flight key={f.id} data={f} />)}</ul>
+					<ul className={"resultList"}>{flights.map((f) => <Flight key={f.id} data={f} />)}</ul>
 			</div>	
 		</div>
 	)  

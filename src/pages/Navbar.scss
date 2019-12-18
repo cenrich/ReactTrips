@@ -17,16 +17,12 @@
 
         font-size: 17px;
         padding: 14px;
-        &:hover {
-            color: $blue;
-          }
         a {
           color:$white;
           text-decoration: none;
          
           &:hover {
-            background-color:$blue;
-            color:$white;
+            color:$blue;
           }
           .logo{
               width: 50px;

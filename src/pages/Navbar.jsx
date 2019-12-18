@@ -3,7 +3,7 @@ import '../pages/Navbar.scss'
 
 const Navbar = (props) => {
     return (
-        <nav className='mainNavbar'>
+        <nav className={'mainNavbar'}>
             <ul>
                 <li><a href={'#'}>
                         <div className="logo"> </div>

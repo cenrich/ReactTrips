@@ -34,26 +34,24 @@ body{
     }
     
    
-    .flightResultsTitle{
-      position: relative;
-    top:400px;
-        font-size: 20px;
-        text-align: center;
-        color:$purple;
-        padding: 20px;
-        text-transform: uppercase;
-        span{
-         font-weight: bolder;
-        }
-    }
+    
     .resultsContainer{
-      position: relative;
-    top:400px;
-      width: 100%;
-      display:flex;
-      justify-content: center;
+      display: block;
+      padding-top: 400px; 
       margin: auto;
+      .flightResultsTitle{
+          font-size: 20px;
+          text-align: center;
+          color:$purple;
+          padding: 20px;
+          text-transform: uppercase;
+          span{
+           font-weight: bolder;
+          }
+      }
       .resultList{
+        display:flex;
+      justify-content: center;
         flex-direction: column;
         
                   li{

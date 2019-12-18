@@ -25,7 +25,7 @@ const Home = () => {
 			<Navbar></Navbar>
 			<Header></Header>
 
-			<div className="formInput">
+		<div className={"formInput"}>
 				<Formik initialValues={form} onSubmit={(v) => getResults(v)}>
 					{(props) => (
 						<Form className={'form'}>
@@ -65,25 +65,25 @@ const Home = () => {
 			<div className={'footer'}>
 				<ul>
 					<li>
-						<a>Hotels</a>
+						<a href='#'>Hotels</a>
 					</li>
 					<li>
-						<a>Flights</a>
+						<a href='#'>Flights</a>
 					</li>
 					<li>
-						<a>Homes</a>
+						<a href='#'>Homes</a>
 					</li>
 					<li>
-						<a>Cars</a>
+						<a href='#'>Cars</a>
 					</li>
 					<li>
-						<a>Experiences</a>
+						<a href='#'>Experiences</a>
 					</li>
 					<li>
-						<a>About Us</a>
+						<a href='#'>About Us</a>
 					</li>
 					<li>
-						<a>Contact</a>
+						<a href='#'>Contact</a>
 					</li>
 				</ul>
 			</div>
