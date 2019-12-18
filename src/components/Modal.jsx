@@ -1,7 +1,13 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 import '../components/Modal.scss'
 
 const Modal = ({ isOpen, toggle, data:{ curr, price, it }})=>{
+
+    let history = useHistory()
+    
+    const confirm = (values) => history.push(`/success?q=${btoa(JSON.stringify(values))}`)
+
     return (
         <div className={`modal ${isOpen?'open':''}`}>
             < div className='modal-container'>
@@ -20,7 +26,7 @@ const Modal = ({ isOpen, toggle, data:{ curr, price, it }})=>{
 			})}
 				<div className="elegir4">{`Precio: ${curr} ${price}`}</div>
                 <button type='button' onClick={toggle}>Volver</button>
-                <button type='button' onClick={()=>console.log('prácticamente ahí')}>Seguir</button>
+                <button type='button' onClick={()=>confirm()}>Seguir</button>
 
             </div>
         </div>
