@@ -1,0 +1,46 @@
+@import "../helpers/reset";
+@import "../helpers/variables";
+
+
+
+.form{
+        
+    
+    .searchInput{
+        font-size: 15px;
+        height: 40px;
+        padding: 10px;
+        box-sizing: border-box;
+        border-color: transparent;
+        background-color: transparent;
+        border: 1px solid $grey;    
+        margin: 10px;
+        &:nth-child(5){
+            width: 75px;
+        }
+          &:hover{
+              border-color: $grey;
+              background-color:$light-grey;
+            }
+            
+        }
+        .searchButton{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border-style: none;
+            background-color: $white;
+            color:$purple;
+            font-family: $font-title;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-align: center;
+            padding: 5px;
+            margin-left: 10px;
+            &:hover{
+                color:$white;
+                background-color: $purple;
+            }
+        }
+    }
+    
