@@ -4,14 +4,14 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './App.scss'
 import Home from './pages/Home'
 import Results from './pages/Results'
-import Selected from './pages/Selected'
+import Success from './pages/Success'
 
 const AppRouter = () => {
 	return (
 		<Router>
 			<Route exact path={'/'} component={Home} />
 			<Route path={'/results'} component={Results} />
-			<Route path={'/selected'} component={Selected} />
+			<Route path={'/success'} component={Success} />
 		</Router>
 	)
 }
