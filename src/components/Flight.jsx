@@ -1,10 +1,9 @@
-import React from 'react'
-import { useHistory } from 'react-router-dom'
+import React, { useState } from 'react'
+import Modal from '../components/Modal'
 
 const Flight = ({ data: { itineraries, price: { grandTotal, currency } } }) => {
-	let history = useHistory()
-		
-	const retrieveSelection = (values) => history.push(`/selected?q=${btoa(JSON.stringify(values))}`)
+	
+	const [ isModalOpen, toggleModal ] = useState(false)
 
 	return (
 		<li>
@@ -24,11 +23,14 @@ const Flight = ({ data: { itineraries, price: { grandTotal, currency } } }) => {
 				<div className="price">{`Precio: ${currency} ${grandTotal}`}</div>
 		
 			<button className="selectBtn" type={'button'} 
-					onClick={()=>retrieveSelection(itineraries, currency, grandTotal)}>
+					onClick={()=>toggleModal(true)}>
 					Seleccionar
 			</button>
+			<Modal 	isOpen={isModalOpen} 
+					toggle={()=>toggleModal(false)}
+					data={ {curr:currency, price:grandTotal, it:itineraries}  } 
+			/>
 		</li>
-	
 	)
 }
 

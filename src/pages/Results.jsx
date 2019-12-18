@@ -32,11 +32,11 @@ const Results = (props) => {
 	
 	isLoading? (
 
-		<div class="load-wrapp">
-		 <div class="load-7">
+		<div className="load-wrapp">
+		 <div className="load-7">
 			 <p>Loading</p>
-			 <div class="square-holder">
-				 <div class="square"></div>
+			 <div className="square-holder">
+				 <div className="square"></div>
 			 </div>
 		 </div>
 		</div>
