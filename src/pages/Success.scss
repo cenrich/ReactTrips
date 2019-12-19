@@ -3,10 +3,11 @@
 
 body { 
 
-    background-image: url(../helpers/backSuccess.jpg);
+    
+    .formContainer{ 
+        background-image: url(../helpers/backSuccess.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    .formContainer{ 
         
         display: block;
         padding-top: 70px; 
