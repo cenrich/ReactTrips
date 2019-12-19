@@ -1,31 +1,38 @@
 import React from 'react'
 import { Formik, Form, Field } from 'formik'
 import '../pages/Success.scss'
+import Navbar from "../pages/Navbar"
+
 
 const Success = () =>{
     return (
 
-        <React.Fragment> 
-        <h1>Sensacional éxito</h1>
-
+     <React.Fragment> 
+		<Navbar></Navbar>
+	
+        <div className={'formContainer'}> 
         <Formik>
 					{(props) => (
-						<Form className={'form'}>
-							<Field className={'searchInput'} name={'name'} placeholder={'Nombre:'} />
-							<Field className={'searchInput'} name={'lastname'} placeholder={'Apellido:'} />
-							<Field className={'searchInput'} name={'birthdate'} type={'date'} placeholder={'DD/MM/YY'} />
-							<Field className={'searchInput'} name={'passport'} placeholder={'Pasaporte:'} />
-							<Field className={'searchInput'} name={'bill'} placeholder={'Dirección:'} />
-                            <Field className={'searchInput'} name={'city'} placeholder={'Ciudad:'} />
-                            <Field className={'searchInput'} name={'nameoncard'} placeholder={'Nombre en la tarjeta:'} />
-							<Field className={'searchInput'} name={'cardnum'} placeholder={'Número de tarjeta'} />
-							<Field className={'searchInput'} name={'expiredate'} type={'date'} placeholder={'DD/MM/YY'} />
-							<button className={'searchButton'}type={'button'} onClick={() => props.handleSubmit()}>
-								>
+						<Form className={'formPayment'}>
+							<h2>Datos de pago</h2>
+							<p>Completa con tus datos personales</p>
+							<Field className={'searchInputPayment'} name={'name'} placeholder={'Nombre:'} />
+							<Field className={'searchInputPayment'} name={'lastname'} placeholder={'Apellido:'} />
+							<Field className={'searchInputPayment'} name={'birthdate'} type={'date'} placeholder={'DD/MM/YY'} />
+							<Field className={'searchInputPayment'} name={'passport'} placeholder={'Pasaporte:'} />
+							<p>Completa con tus datos de tarjeta de credito</p>
+							<Field className={'searchInputPayment'} name={'bill'} placeholder={'Dirección:'} />
+                            <Field className={'searchInputPayment'} name={'city'} placeholder={'Ciudad:'} />
+                            <Field className={'searchInputPayment'} name={'nameoncard'} placeholder={'Nombre en la tarjeta:'} />
+							<Field className={'searchInputPayment'} name={'cardnum'} placeholder={'Número de tarjeta'} />
+							<Field className={'searchInputPayment'} name={'expiredate'} type={'date'} placeholder={'DD/MM/YY'} />
+							<button className={'searchButtonPayment'}type={'button'} onClick={() => props.handleSubmit()}>
+								Pagar
 							</button>
 						</Form>
 					)}
 				</Formik>
+				</div>
     
                 </React.Fragment>
     )

@@ -44,6 +44,7 @@ body{
           text-align: center;
           color:$purple;
           padding: 20px;
+          font-family: $font-title;
           text-transform: uppercase;
           span{
            font-weight: bolder;
@@ -53,11 +54,13 @@ body{
         display:flex;
       justify-content: center;
         flex-direction: column;
+        font-family: $font-title;
         
                   li{
                       padding: 8px;
                       flex-direction: row;
                       align-items: center;
+                      font-family: $font-title;
                       display: flex;
                       justify-content: space-between;
                       .destinationResults{
@@ -68,6 +71,7 @@ body{
                       }
                       .price{
                         padding: 5px;
+                        font-family: $font-title;
                       }
                       .selectBtn{
                         width: 150px;

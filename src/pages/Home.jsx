@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom'
 import Navbar from "../pages/Navbar"
 import Header from "../pages/Header"
 import '../pages/Home.scss'
+import Footer from '../pages/Footer'
 
 const Home = () => {
 	let history = useHistory()
@@ -62,31 +63,7 @@ const Home = () => {
 				</li>
 			</ul>	
 
-			<div className={'footer'}>
-				<ul>
-					<li>
-						<a href='#'>Hotels</a>
-					</li>
-					<li>
-						<a href='#'>Flights</a>
-					</li>
-					<li>
-						<a href='#'>Homes</a>
-					</li>
-					<li>
-						<a href='#'>Cars</a>
-					</li>
-					<li>
-						<a href='#'>Experiences</a>
-					</li>
-					<li>
-						<a href='#'>About Us</a>
-					</li>
-					<li>
-						<a href='#'>Contact</a>
-					</li>
-				</ul>
-			</div>
+			<Footer></Footer>
 					</React.Fragment>
 				)
 			}
