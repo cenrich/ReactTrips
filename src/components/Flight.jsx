@@ -13,7 +13,7 @@ const Flight = ({ data: { itineraries, price: { grandTotal, currency } } }) => {
 						<div className="duration">{e.duration}</div>
 						{e.segments.map((e, i) => (
 							<div className="destination" key={i}>
-								{`${e.departure.iataCode} - ${e.arrival.iataCode}`}
+								{`/${e.carrierCode}/ ${e.departure.iataCode}  - ${e.arrival.iataCode}`}
 							</div>
 						))}
 					</div>
