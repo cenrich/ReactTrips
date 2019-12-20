@@ -19,7 +19,7 @@ const Results = (props) => {
 		setInputData(values) //me parece que esto desvirtúa un poco la función
 		toggleLoading(false)
 	}
-	
+
 	useEffect(() => {
 		let url = new URL(window.location.href)
 		let data = JSON.parse(atob(url.searchParams.get('q')))
@@ -27,9 +27,6 @@ const Results = (props) => {
 	}, [])
 
 	return (
-
-
-		
 	
 	isLoading? ( 
 
@@ -46,20 +43,17 @@ const Results = (props) => {
 	  : (
 		
 		<div>
-		<Navbar></Navbar>
-		<Header></Header>
+		<Navbar/>
+		<Header/>
 			
-			<div className={"resultsContainer"}>
+		<div className={"resultsContainer"}>
 			<h2 className={"flightResultsTitle"}>
 				Encontramos {flights.length} vuelos para ir de <span> {inputData.departure} </span> a <span>{inputData.arrival} </span>
 			</h2>
-					<ul className={"resultList"}>{flights.map((f) => <Flight key={f.id} data={f} />)}</ul>
-			</div>	
-		</div>
+			<ul className={"resultList"}>{flights.map((f) => <Flight key={f.id} data={f} />)}</ul>
+		</div>	
+	</div>
 	)  
-	
-
-	)
-}
+)}
 
 export default Results

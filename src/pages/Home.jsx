@@ -23,8 +23,8 @@ const Home = () => {
 		
 		<React.Fragment>
 
-			<Navbar></Navbar>
-			<Header></Header>
+			<Navbar />
+			<Header />
 
 		<div className={"formInput"}>
 				<Formik initialValues={form} onSubmit={(v) => getResults(v)}>
@@ -32,9 +32,9 @@ const Home = () => {
 						<Form className={'form'}>
 							<Field className={'searchInput'} name={'departure'} placeholder={'Origen:'} />
 							<Field className={'searchInput'} name={'from'} type={'date'} placeholder={'DD/MM/YY'} />
-							<Field className={'searchInput'} name={'to'} type={'date'} placeholder={'DD/MM/YY'} />
 							<Field className={'searchInput'} name={'arrival'} placeholder={'Destino:'} />
-							<Field className={'searchInput'} name={'adults'} placeholder={'Adultos'} />
+							<Field className={'searchInput'} name={'to'} type={'date'} placeholder={'DD/MM/YY'} />
+							<Field className={'searchInput'} name={'adults'} placeholder={'Pasajeros:'} />
 							<button className={'searchButton'}type={'button'} onClick={() => props.handleSubmit()}>
 								>
 							</button>
@@ -63,9 +63,9 @@ const Home = () => {
 				</li>
 			</ul>	
 
-			<Footer></Footer>
-					</React.Fragment>
-				)
-			}
+			<Footer/>
+	</React.Fragment>
+	)
+}
 
 export default Home
