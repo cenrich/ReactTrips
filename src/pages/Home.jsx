@@ -1,10 +1,11 @@
 import React from 'react'
 import { Formik, Form, Field } from 'formik'
 import { useHistory } from 'react-router-dom'
-import Navbar from "../pages/Navbar"
-import Header from "../pages/Header"
+import Navbar from "../components/Navbar"
+import Header from "../components/Header"
+import Footer from "../components/Footer"
 import '../pages/Home.scss'
-import Footer from '../pages/Footer'
+
 
 const Home = () => {
 	let history = useHistory()
@@ -64,7 +65,7 @@ const Home = () => {
 				</ul>	
 			</div>
 
-			<Footer/>
+		<Footer/>
 	</React.Fragment>
 	)
 }

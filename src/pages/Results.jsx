@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react'
 import Flight from '../components/Flight'
 import fetchData from '../helpers/apiCall'
 import '../pages/Results.scss'
-import Navbar from "../pages/Navbar"
-import Header from '../pages/Header'
+import Navbar from "../components/Navbar"
+import Header from '../components/Header'
 
 
 const Results = (props) => {

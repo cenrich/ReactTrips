@@ -1,7 +1,7 @@
 import React from 'react'
 import { Formik, Form, Field } from 'formik'
 import '../pages/Success.scss'
-import Navbar from "../pages/Navbar"
+import Navbar from "../components/Navbar"
 
 
 const Success = () =>{
@@ -24,7 +24,7 @@ const Success = () =>{
 							<Field className={'searchInputPayment'} name={'bill'} placeholder={'Dirección:'} />
                             <Field className={'searchInputPayment'} name={'city'} placeholder={'Ciudad:'} />
 							<p>Completa con tus datos de tarjeta de credito</p>
-                            <Field className={'searchInputPayment'} name={'nameoncard'} placeholder={'Nombre y Apellido en la tarjeta:'} />
+                            <Field className={'searchInputPayment'} name={'nameoncard'} placeholder={'Nombre y Apellido 	en la tarjeta:'} />
 							<Field className={'searchInputPayment'} name={'cardnum'} placeholder={'Número de tarjeta'} />
 							<span>Fecha de vencimiento de la tarjeta</span>
 							<Field className={'searchInputPayment'} name={'expiredate'} type={'date'} placeholder={'DD/MM/YY'} />
