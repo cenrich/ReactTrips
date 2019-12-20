@@ -11,15 +11,7 @@ body {
         
         display: block;
         padding-top: 70px; 
-        h2, p{
-            font-family: $font-title;
-            color:$blue;
-            text-transform: uppercase;
-        }
-        h2{
-            font-size: 30px;
-            padding: 5px;
-        }
+        
     .formPayment{
         background-color: $white;
             margin: 30px 30px 0 30px;
@@ -27,6 +19,21 @@ body {
             flex-direction: column;
             text-align: center;
             width: 500px;
+            h2, p, span{
+                font-family: $font-title;
+                color:$blue;
+                text-transform: uppercase;
+            }
+            h2{
+                font-size: 30px;
+                padding: 5px;
+            }
+            span{
+                text-align: left;
+                font-size: 10px;
+                color:$grey;
+                padding-left: 10px;
+            }
         
         .searchInputPayment{
             font-size: 15px;

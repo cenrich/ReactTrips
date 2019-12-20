@@ -9,13 +9,13 @@ const Flight = ({ data: { itineraries, price: { grandTotal, currency } } }) => {
 		<li>
 			{itineraries.map((e, i) => {
 				return (
-					<div key={i} className="destinationResults">
-						<div className="duration">{e.duration}</div>
+					<div key={i} className={"destinationResults"}>
+						<div className={"duration"}>{e.duration}</div>
 						{e.segments.map((e, i) => (
-							<div className="destination" key={i}>
+							<div className={"destination"} key={i}>
 								{`${e.departure.iataCode}  - ${e.arrival.iataCode}`}
 								<img  	src={`https://content.airhex.com/content/logos/airlines_${e.carrierCode}_200_200_s.png`}
-										className="airlineIcon"></img>
+										className={"airlineIcon"}></img>
 							</div>
 						))}
 					</div>

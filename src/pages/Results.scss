@@ -39,6 +39,7 @@ body{
       display: block;
       padding-top: 400px; 
       margin: auto;
+      width: 80%;
       .flightResultsTitle{
           font-size: 20px;
           text-align: center;
@@ -63,10 +64,15 @@ body{
                       font-family: $font-title;
                       display: flex;
                       justify-content: space-between;
+                      line-height: 30px;
                       .destinationResults{
+                          line-height: 30px;
                           padding: 5px;
                           display: flex;
                           justify-content: space-around;
+                          .duration{
+                            padding: 0 10px;
+                          }
                
                       }
                       .price{
@@ -96,6 +102,7 @@ body{
 .airlineIcon {
   width:20px;
   border-radius:20px ;
+  padding: 0 5px;
 }
 
 }

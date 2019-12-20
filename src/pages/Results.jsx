@@ -50,7 +50,10 @@ const Results = (props) => {
 			<h2 className={"flightResultsTitle"}>
 				Encontramos {flights.length} vuelos para ir de <span> {inputData.departure} </span> a <span>{inputData.arrival} </span>
 			</h2>
-			<ul className={"resultList"}>{flights.map((f) => <Flight key={f.id} data={f} />)}</ul>
+		
+			<ul className={"resultList"}>{flights.map((f) => <Flight key={f.id} data={f} />)}
+			
+			</ul>
 		</div>	
 	</div>
 	)  

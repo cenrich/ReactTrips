@@ -27,7 +27,7 @@ body{
             border: 1px solid $grey;    
             margin: 10px;
             &:nth-child(5){
-                width: 75px;
+                width: 100px;
             }
               &:hover{
                   border-color: $grey;
@@ -56,18 +56,27 @@ body{
         }
         
     }
-        .pageInfo{
+        .pageInfoExtract{ 
+            position: relative;
+            top: 450px;
+            width: 100%;
             display: flex;
-            justify-content: space-around;
-          list-style-type: none;
-          .extract{
-              width: 20%;
-              h2{
-              padding-bottom: 10px;
+            justify-content: center;
+            .pageInfo{
+                 display: flex;
+                 justify-content: space-around;
+                 list-style-type: none;
+                 font-family: $font-title;
+            .extract{
+                width: 20%;
+                h2{
+                padding-bottom: 10px;
+                text-transform: uppercase;
+                color:$blue;
+                }
             }
           }
-      }
-     
+        }
       }
     
 
