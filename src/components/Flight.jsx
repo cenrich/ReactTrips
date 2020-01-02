@@ -5,6 +5,8 @@ const Flight = ({ data: { itineraries, price: { grandTotal, currency } } }) => {
 	
 	const [ isModalOpen, toggleModal ] = useState(false)
 
+// Si pudiera hacer del fetchCity una función, este sería un muy buen lugar para usarla.
+
 	return (
 		<li>
 			{itineraries.map((e, i) => {
@@ -14,16 +16,15 @@ const Flight = ({ data: { itineraries, price: { grandTotal, currency } } }) => {
 						{e.segments.map((e, i) => (
 							<div className={"destination"} key={i}>
 								{`${e.departure.iataCode}  - ${e.arrival.iataCode}`}
-								<img  	src={`https://content.airhex.com/content/logos/airlines_${e.carrierCode}_200_200_s.png`}
-										className={"airlineIcon"}></img>
+								<img 	src={`https://content.airhex.com/content/logos/airlines_${e.carrierCode}_200_200_s.png`}
+										className={"airlineIcon"} />
 							</div>
 						))}
 					</div>
 				)
 			})}
 	
-				<div className="price">{`Precio: ${currency} ${grandTotal}`}</div>
-		
+			<div className="price">{`Precio: ${currency} ${grandTotal}`}</div>
 			<button className="selectBtn" type={'button'} 
 					onClick={()=>toggleModal(true)}>
 					Seleccionar

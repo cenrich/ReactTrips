@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import '../components/Modal.scss'
 
 const Modal = ({ isOpen, toggle, data:{ curr, price, it }})=>{
-
+       
     let history = useHistory()
     
     const confirm = (values) => history.push(`/success?q=${btoa(JSON.stringify(values))}`)
